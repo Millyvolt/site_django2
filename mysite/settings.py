@@ -128,6 +128,20 @@ INTERNAL_IPS = [
     "127.0.0.1",
 ]
 
+# Django Debug Toolbar configuration
+DEBUG_TOOLBAR_CONFIG = {
+    'SHOW_TEMPLATE_CONTEXT': True,
+}
+
+# Only show debug toolbar on admin pages
+def show_toolbar(request):
+    return request.path.startswith('/admin/')
+
+DEBUG_TOOLBAR_CONFIG = {
+    'SHOW_TEMPLATE_CONTEXT': True,
+    'SHOW_TOOLBAR_CALLBACK': show_toolbar,
+}
+
 TESTING = "test" in sys.argv or "PYTEST_VERSION" in os.environ
 
 if not TESTING:

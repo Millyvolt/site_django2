@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>My Django Site</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background-color: #f5f5f5;
+        }
+        .container {
+            background-color: white;
+            padding: 40px;
+            border-radius: 8px;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+            text-align: center;
+        }
+        h1 {
+            color: #333;
+            margin-bottom: 30px;
+        }
+        .polls-link {
+            display: inline-block;
+            background-color: #007bff;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .polls-link:hover {
+            background-color: #0056b3;
+        }
+        .buttons {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+        .leetcode-link {
+            display: inline-block;
+            background-color: #ffa116;
+            color: white;
+            padding: 15px 30px;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+            transition: background-color 0.3s;
+        }
+        .leetcode-link:hover {
+            background-color: #e8910d;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Welcome to My Django Site</h1>
+        <p>This is the main page of your Django application.</p>
+        <div class="buttons">
+            <a href="{% url 'polls:index' %}" class="polls-link">Go to Polls</a>
+            <a href="{% url 'leetcode' %}" class="leetcode-link">Leetcode</a>
+        </div>
+    </div>
+</body>
+</html>
