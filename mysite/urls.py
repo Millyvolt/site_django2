@@ -24,6 +24,8 @@ from . import views
 urlpatterns = [
     path("", views.home, name="home"),
     path("leetcode/", views.leetcode, name="leetcode"),
+    path("leetcode/today/", views.leetcode_today, name="leetcode_today"),
+    path("leetcode/recent/", views.leetcode_recent, name="leetcode_recent"),
     path("polls/", include("polls.urls")),
     path("admin/", admin.site.urls),
 ]
